@@ -47,20 +47,20 @@ const CallbackPage: React.FC = () => {
   // }, [navigate]);
 useEffect(() => {
     const handleCallback = async () => {
-      console.log('Full URL:', window.location.href);
+      // console.log('Full URL:', window.location.href);
       const urlParams = new URLSearchParams(window.location.search);
       
-      console.log('All URL params:', Object.fromEntries(urlParams.entries()));
+      // console.log('All URL params:', Object.fromEntries(urlParams.entries()));
       
       const code = urlParams.get('code');
       const state = urlParams.get('state');
       const storedState = localStorage.getItem('spotify_auth_state');
       const error = urlParams.get('error');
 
-      console.log('Auth code:', code);
-      console.log('State param:', state);
-      console.log('Stored state:', storedState);
-      console.log('Error param:', error);
+      // console.log('Auth code:', code);
+      // console.log('State param:', state);
+      // console.log('Stored state:', storedState);
+      // console.log('Error param:', error);
 
       if (error) {
         console.error('Spotify auth error:', error);
